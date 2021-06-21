@@ -7,7 +7,7 @@ app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/app", require("./routes/app.routes"));
 async function start() {
   try {
-    await mongoose.connect(process.env.DB_KEY, {
+    await mongoose.connect("mongodb+srv://DbUser:0vdkp9DflPCKn465@cluster0.7c9gb.mongodb.net/app?retryWrites=true&w=majority", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,

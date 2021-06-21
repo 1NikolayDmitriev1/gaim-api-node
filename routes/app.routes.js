@@ -6,7 +6,7 @@ router.post("/main", async (req, res) => {
   try {
     const user = await User.findById(req.body.userId);
     const resAPI = await axios.get(
-      `https://api.rawg.io/api/games?${req.body.params}&page_size=21&page=${req.body.count}&key=${process.env.API_KEY}`
+      `https://api.rawg.io/api/games?${req.body.params}&page_size=21&page=${req.body.count}&key=eba7b94026164b889f425dfbf7263079`
     );
     res
       .status(200)
@@ -17,7 +17,7 @@ router.post("/main", async (req, res) => {
 });
 
 router.post("/search", async (req, res) => {
-  let urlDefault = `https://api.rawg.io/api/games?page_size=21&page=${req.body.count}&search=${req.body.params}&key=${process.env.API_KEY}`;
+  let urlDefault = `https://api.rawg.io/api/games?page_size=21&page=${req.body.count}&search=${req.body.params}&key=eba7b94026164b889f425dfbf7263079`;
 
   try {
     const resAPI = await axios.get(urlDefault);
